@@ -1,0 +1,46 @@
+<div class="col-md-8">
+  <%= react_component("DailyAchievementBox",
+    {presenter: @daily_achievement_presenter.to_json},
+    {prerender: true}) %>
+</div>
+
+<div class="col-md-4">
+  <div class="box box-success">
+    <div class="box-header">
+      <h3 class="box-title">Metrics</h3>
+      <div class="box-tools pull-right">
+        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="info-box bg-aqua">
+        <span class="info-box-icon"><i class="fa fa-bookmark-o"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Discipline</span>
+          <span class="info-box-number">410</span>
+          <div class="progress">
+            <div class="progress-bar" style="width: 70%"></div>
+          </div>
+          <span class="progress-description">
+            70% Increase in 30 Days
+          </span>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+
+      <div class="info-box bg-green">
+        <span class="info-box-icon"><i class="fa fa-thumbs-o-up"></i></span>
+        <div class="info-box-content">
+          <span class="info-box-text">Focus</span>
+          <span class="info-box-number">6</span>
+          <div class="progress">
+            <div class="progress-bar" style="width: 17%"></div>
+          </div>
+        </div><!-- /.info-box-content -->
+      </div><!-- /.info-box -->
+    </div>
+  </div><!-- /.box -->
+
+  <%= react_component("GoalBox", {presenter: @goal_presenter.to_json}, {prerender: true}) %>
+</div>
+
+
