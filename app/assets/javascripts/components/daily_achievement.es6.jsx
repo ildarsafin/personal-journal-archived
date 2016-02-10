@@ -13,7 +13,7 @@ class DailyAchievement extends React.Component {
             <i className="fa fa-clock-o bg-blue"></i>
             <div className="timeline-item">
               <div className="timeline-body">
-                <div>{this.props.text}</div>
+                <div><span dangerouslySetInnerHTML={{__html: this.props.text}}></span></div>
               </div>
             </div>
           </li>
