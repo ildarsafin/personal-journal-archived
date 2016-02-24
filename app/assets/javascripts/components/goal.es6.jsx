@@ -1,6 +1,5 @@
 class Goal extends React.Component {
   render () {
-    console.log()
     let milliseconds = Date.parse(this.props.endAt) - Date.parse(this.props.startAt)
     let days = Math.floor(milliseconds / (1000*60*60*24));
 
@@ -13,7 +12,7 @@ class Goal extends React.Component {
         <input type="checkbox" value="" name=""/>
         <span className="text">{this.props.description}</span>
         <small className="label label-danger">
-        <i className="fa fa-clock-o"></i> {days} days</small>
+        <i className="fa fa-clock-o"></i> {days} дней</small>
         <div className="tools">
           <i className="fa fa-edit"></i>
           <i className="fa fa-trash-o"></i>

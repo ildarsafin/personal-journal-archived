@@ -1,7 +1,7 @@
 class DailyAchievementsController < ApplicationController
   def index
     @daily_achievement_presenter = {
-      daily_achievements: DailyAchievement.last(20),
+      daily_achievements: DailyAchievement.all,
       form: {
         action: daily_achievements_url,
         csrf_param: request_forgery_protection_token,
@@ -10,7 +10,7 @@ class DailyAchievementsController < ApplicationController
     }
 
     @goal_presenter = {
-      goals: Goal.last(5),
+      goals: Goal.all,
       form: {
         action: goals_url,
         csrf_param: request_forgery_protection_token,
@@ -24,7 +24,7 @@ class DailyAchievementsController < ApplicationController
     @daily_achievement.save
 
     if request.xhr?
-      render json: DailyAchievement.last(20)
+      render json: DailyAchievement.all
     else
       redirect_to daily_achievements_path
     end

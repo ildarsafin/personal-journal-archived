@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-gem "rails", "5.0.0beta1.1"
-gem "pg"
-
 ruby "2.3.0"
+
+gem "rails", "4.2.5.1"
+gem "pg"
 
 gem "sass-rails", "~> 5.0"
 gem "bootstrap-sass"
@@ -13,18 +13,11 @@ gem "jquery-rails"
 gem "react-rails"
 gem "turbolinks"
 gem "carrierwave"
-gem "ransack"
+gem "cloudinary"
 gem "autoprefixer-rails"
 
 # all other gems
 gem "devise"
-gem "devise_invitable"
-gem "omniauth"
-gem "omniauth-oauth2"
-gem "omniauth-facebook"
-gem "omniauth-twitter"
-gem "omniauth-google-oauth2"
-gem "omniauth-vkontakte"
 gem "kaminari"
 gem "responders"
 gem "seedbank"
@@ -33,6 +26,8 @@ gem "slim"
 gem "thin"
 gem "acts_as_list"
 gem "resque"
+gem "kaminari"
+gem "simple_form"
 
 group :staging, :production do
   gem "rails_12factor"

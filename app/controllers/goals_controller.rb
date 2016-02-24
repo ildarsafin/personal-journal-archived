@@ -4,7 +4,7 @@ class GoalsController < ApplicationController
     @goal.save
 
     if request.xhr?
-      render json: Goal.last(5)
+      render json: Goal.all
     else
       redirect_to daily_achievements_url
     end

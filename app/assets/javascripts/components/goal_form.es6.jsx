@@ -23,27 +23,27 @@ class GoalForm extends React.Component {
     return (
       <div className="box">
         <div className="box-header">
-          <h3 className="box-title">Add Goal</h3>
+          <h3 className="box-title">Добавить Цели на год</h3>
         </div>
         <div className="box-body">
           <form ref="form" className="goal-form" action={ this.props.form.action } acceptCharset="UTF-8" method="post" onSubmit={ this.handleSubmit.bind(this) }>
             <input type="hidden" name={ this.props.form.csrf_param } value={ this.props.form.csrf_token } />
             <div className="form-group">
-              <label>Goal Text</label>
+              <label>Цель</label>
               <input ref="description" type="text" name="goal[description]" className="form-control" placeholder="Enter ..."/>
             </div>
             <div className="form-group">
-              <label>Date range button:</label>
+              <label>В течение:</label>
               <input ref="start_at" type="hidden" name="goal[start_at]" id="start_at"/>
               <input ref="end_at" type="hidden" name="goal[end_at]" id="end_at"/>
               <div className="input-group">
                 <button type="button" className="btn btn-default pull-right" id="daterange-btn">
-                  <i className="fa fa-calendar"></i> Date range picker
+                  <i className="fa fa-calendar"></i> Срок достижения
                   <i className="fa fa-caret-down"></i>
                 </button>
               </div>
             </div>
-            <button type="submit" className="btn btn-default btn-block btn-flat">Add Goal</button>
+            <button type="submit" className="btn btn-default btn-block btn-flat">Добавить</button>
           </form>
         </div>
       </div>

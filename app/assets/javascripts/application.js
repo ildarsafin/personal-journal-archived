@@ -34,18 +34,16 @@ $(function () {
     zIndex: 999999
   });
 
-  $("#start_at").val(moment().subtract(29, 'days').format("MMMM D, YYYY"))
-  $("#end_at").val(moment().format("MMMM D, YYYY"))
+  $("#start_at").val(moment().format("MMMM D, YYYY"))
+  $("#end_at").val(moment().endOf('year').format("MMMM D, YYYY"))
 
   //Date range as a button
   $('#daterange-btn').daterangepicker({
     ranges: {
-      'Today': [moment(), moment()],
-      'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-      'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-      'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-      'This Month': [moment().startOf('month'), moment().endOf('month')],
-      'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+      'В этом году': [moment(), moment().endOf('year')],
+      'За сегодня': [moment(), moment()],
+      'За 7 дней': [moment(), moment().add(6, 'days')],
+      'За этот месяц': [moment().endOf('month'), moment().startOf('month')]
     },
     startDate: moment().subtract(29, 'days'),
     endDate: moment()

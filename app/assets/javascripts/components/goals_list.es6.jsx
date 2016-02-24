@@ -13,7 +13,7 @@ class GoalsList extends React.Component {
     return (
       <div className="box box-primary">
         <div className="box-header with-border">
-          <h3 className="box-title">Goals</h3>
+          <h3 className="box-title">В 2016 я хочу</h3>
           <div className="box-tools pull-right">
             <button className="btn btn-box-tool" data-widget="collapse"><i className="fa fa-minus"></i></button>
           </div>
@@ -24,9 +24,6 @@ class GoalsList extends React.Component {
               {goals}
             </ul>
           </div>
-        </div>
-        <div className="box-footer text-center">
-          <a href="#" className="uppercase">View All Goals</a>
         </div>
       </div>
     )
