@@ -1,4 +1,4 @@
-class CreateGoals < ActiveRecord::Migration[5.0]
+class CreateGoals < ActiveRecord::Migration
   def change
     create_table :goals do |t|
       t.string  :description, null: false

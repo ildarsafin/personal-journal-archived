@@ -1,4 +1,4 @@
-class CreateDailyAchievements < ActiveRecord::Migration[5.0]
+class CreateDailyAchievements < ActiveRecord::Migration
   def change
     create_table :daily_achievements do |t|
       t.text :text, null: false
