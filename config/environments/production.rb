@@ -1,6 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.react.variant = :production
+  config.react.server_renderer_options = {
+    files: ["components.js"], # files to load for prerendering
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -76,6 +81,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  config.react.variant = :production
 end
