@@ -1,17 +1,18 @@
 header class="main-header"
 
-  nav class="navbar navbar-static-top" role="navigation"
-    .navbar-header
-      = link_to root_url, class: "navbar-brand"
-        b In
-        | Diary
+  nav class="navbar navbar-static-top"
+    .container
+      .navbar-header
+        = link_to root_url, class: "navbar-brand" do
+          b In
+          | Diary
 
-    .navbar-custom-menu
-      ul class="nav navbar-nav"
-        li class="user user-menu"
-          = link_to edit_profile_path(current_user), class: "hidden-xs" do
-            = image_tag current_user.avatar.url || "user3-128x128.jpg", class: "user-image"
-            span
-              = current_user.name_or_email
-        li
-          = link_to "Выйти", destroy_user_session_url, method: :delete
+      .navbar-custom-menu.pull-right
+        ul class="nav navbar-nav"
+          li class=" user user-menu"
+            = link_to edit_profile_path(current_user) do
+              = image_tag current_user.avatar.url || "user3-128x128.jpg", class: "user-image"
+              span
+                = current_user.name_or_email
+          li
+            = link_to "Выйти", destroy_user_session_url, method: :delete

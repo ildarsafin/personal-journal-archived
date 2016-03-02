@@ -30,7 +30,7 @@ class GoalForm extends React.Component {
             <input type="hidden" name={ this.props.form.csrf_param } value={ this.props.form.csrf_token } />
             <div className="form-group">
               <label>Цель</label>
-              <input ref="description" type="text" name="goal[description]" className="form-control" placeholder="Enter ..."/>
+              <input ref="description" type="text" name="goal[description]" className="form-control" placeholder="Введите свои самые заветные цели и желания на год"/>
             </div>
             <div className="form-group">
               <label>В течение:</label>

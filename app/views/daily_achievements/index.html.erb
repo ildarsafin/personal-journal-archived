@@ -1,10 +1,4 @@
-<div class="col-md-8">
-  <%= react_component("DailyAchievementBox",
-    {presenter: @daily_achievement_presenter.to_json},
-    {prerender: true}) %>
-</div>
-
-<div class="col-md-4">
+<div class="col-md-4 col-md-push-8">
 <!--   <div class="box box-success">
     <div class="box-header">
       <h3 class="box-title">Metrics</h3>
@@ -43,4 +37,8 @@
   <%= react_component("GoalBox", {presenter: @goal_presenter.to_json}, {prerender: true}) %>
 </div>
 
-
+<div class="col-md-8 col-md-pull-4">
+  <%= react_component("DailyAchievementBox",
+    {presenter: @daily_achievement_presenter.to_json},
+    {prerender: true}) %>
+</div>

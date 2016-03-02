@@ -29,7 +29,7 @@ class DailyAchievementForm extends React.Component {
         <div className="box-body pad">
           <form ref="form" className="daily-achievement-form" action={ this.props.form.action } acceptCharset="UTF-8" method="post" onSubmit={ this.handleSubmit.bind(this) }>
             <input type="hidden" name={ this.props.form.csrf_param } value={ this.props.form.csrf_token } />
-            <textarea ref="text" className="textarea achievement-textarea" name="daily_achievement[text]" placeholder="Place some text here"></textarea>
+            <textarea ref="text" className="textarea achievement-textarea" name="daily_achievement[text]" placeholder="Опишите свой сегодняшний день. Как он прошел. Чего достигли сегодня. С чем не справились. Поделитесь своими впечатлениями."></textarea>
             <button type="submit" className="btn btn-block btn-default btn-flat">Добавить Достижение</button>
           </form>
         </div>
