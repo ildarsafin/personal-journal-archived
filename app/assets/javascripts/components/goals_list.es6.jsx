@@ -3,11 +3,46 @@ class GoalsList extends React.Component {
     super(props, context);
   }
 
+  handleGoalCheck (goal) {
+    let url = "/goals/" + goal.id + "/done";
+    $.ajax({
+      data: {},
+      url: url,
+      type: "POST",
+      dataType: "json",
+      success: function () {
+        this.props.removeGoal(goal)
+      }.bind(this)
+    });
+  }
+
+  handleGoalDestroy (goal) {
+    let url = "/goals/" + goal.id;
+
+    $.ajax({
+      data: {},
+      url: url,
+      type: "DELETE",
+      dataType: "json",
+      success: function () {
+        this.props.removeGoal(goal)
+      }.bind(this)
+    });
+  }
+
   render () {
     let sortedGoals = this.props.goals.sort(function(a, b) { return b.id - a.id });
-
+    let self = this;
     let goals = sortedGoals.map(function ( goal ) {
-      return <Goal description={ goal.description } startAt={ goal.start_at } endAt={ goal.end_at } key={ goal.id } />
+      return <Goal
+        description={ goal.description }
+        startAt={ goal.start_at }
+        endAt={ goal.end_at }
+        key={ goal.id }
+        id={goal.id}
+        handleGoalDestroy={self.handleGoalDestroy.bind(self, goal)}
+        handleGoalCheck={self.handleGoalCheck.bind(self, goal)}
+      />
     });
 
     return (

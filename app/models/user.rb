@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true
 
   has_many :goals
+
   has_many :daily_achievements
 
   def name_or_email

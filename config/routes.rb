@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :goals, only: :create
+  resources :goals, only: [:create, :destroy] do
+    post :done, action: :done
+  end
+
   resources :daily_achievements, only: [:create, :index]
 
   scope module: :users do

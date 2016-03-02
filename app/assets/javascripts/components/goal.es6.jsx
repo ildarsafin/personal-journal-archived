@@ -9,13 +9,14 @@ class Goal extends React.Component {
           <i className="fa fa-ellipsis-v"></i>
           <i className="fa fa-ellipsis-v"></i>
         </span>
-        <input type="checkbox" value="" name=""/>
+        <input type="checkbox" value="" name="" onChange={ this.props.handleGoalCheck }/>
         <span className="text">{this.props.description}</span>
         <small className="label label-danger">
         <i className="fa fa-clock-o"></i> {days} дней</small>
         <div className="tools">
-          <i className="fa fa-edit"></i>
-          <i className="fa fa-trash-o"></i>
+          <a onClick={ this.props.handleGoalDestroy }>
+            <i className="fa fa-trash-o"></i>
+          </a>
         </div>
       </li>
     );
