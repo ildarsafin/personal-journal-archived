@@ -2,14 +2,14 @@ header class="main-header"
 
   nav class="navbar navbar-static-top"
     .container
-      .navbar-header
+      .navbar-header.col-xs-4
         = link_to root_url, class: "navbar-brand" do
           b In
           | Diary
 
-      .navbar-custom-menu.pull-right
+      .navbar-custom-menu
         ul class="nav navbar-nav"
-          li class=" user user-menu"
+          li class="user user-menu"
             = link_to edit_profile_path(current_user) do
               = image_tag current_user.avatar.url || "user3-128x128.jpg", class: "user-image"
               span
