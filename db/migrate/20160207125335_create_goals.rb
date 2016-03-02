@@ -5,6 +5,8 @@ class CreateGoals < ActiveRecord::Migration
       t.datetime  :start_at, null: false
       t.datetime  :end_at, null: false
       t.boolean :done, default: false
+
+      t.references :user, null:false, index: true
     end
   end
 end

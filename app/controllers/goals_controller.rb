@@ -1,7 +1,6 @@
 class GoalsController < ApplicationController
   def create
-    @goal = Goal.new(goal_params)
-    @goal.save
+    @goal = current_user.goals.create(goal_params)
 
     if request.xhr?
       render json: Goal.all

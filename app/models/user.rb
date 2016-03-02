@@ -4,5 +4,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
-  validates :email, uniqueness: true, presence: true
+  validates :email, presence: true
+
+  has_many :goals
+  has_many :daily_achievements
 end

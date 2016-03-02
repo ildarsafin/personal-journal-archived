@@ -18,16 +18,22 @@ ActiveRecord::Schema.define(version: 20160224122536) do
 
   create_table "daily_achievements", force: :cascade do |t|
     t.text     "text",       null: false
+    t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "daily_achievements", ["user_id"], name: "index_daily_achievements_on_user_id", using: :btree
 
   create_table "goals", force: :cascade do |t|
     t.string   "description",                 null: false
     t.datetime "start_at",                    null: false
     t.datetime "end_at",                      null: false
     t.boolean  "done",        default: false
+    t.integer  "user_id",                     null: false
   end
+
+  add_index "goals", ["user_id"], name: "index_goals_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "full_name"
