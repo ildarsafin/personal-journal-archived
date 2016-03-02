@@ -8,4 +8,10 @@ class User < ActiveRecord::Base
 
   has_many :goals
   has_many :daily_achievements
+
+  def name_or_email
+    return full_name if full_name.present?
+
+    email
+  end
 end

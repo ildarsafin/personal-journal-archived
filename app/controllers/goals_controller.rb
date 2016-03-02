@@ -3,7 +3,7 @@ class GoalsController < ApplicationController
     @goal = current_user.goals.create(goal_params)
 
     if request.xhr?
-      render json: Goal.all
+      render json: current_user.daily_achievements
     else
       redirect_to daily_achievements_url
     end
