@@ -1,16 +1,21 @@
 class AvatarUploader < CarrierWave::Uploader::Base
-  include Cloudinary::CarrierWave
+  include CarrierWave::MiniMagick
+
+  def store_dir
+    "uploads/#{Rails.env}/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
 
   def extension_white_list
     %w(jpg jpeg gif png)
   end
 
-  process convert: "png"
-  process tags: ["user_avatar"]
+  process resize_to_fit: [800, 800]
 
-  process resize_to_fill: [500, 500, :center]
+  version :thumb do
+    process resize_to_fill: [500, 500]
+  end
 
-  version :thumbnail do
-    resize_to_fit(100, 100)
+  version :small_thumb do
+    process resize_to_fill: [200, 200]
   end
 end

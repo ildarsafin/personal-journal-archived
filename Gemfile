@@ -12,7 +12,7 @@ gem "therubyracer", platforms: :ruby
 gem "jquery-rails"
 gem "react-rails"
 gem "carrierwave"
-gem "cloudinary"
+gem "mini_magick"
 gem "autoprefixer-rails"
 
 # all other gems
