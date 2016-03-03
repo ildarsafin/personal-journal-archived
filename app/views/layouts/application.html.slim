@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title MyDiary. Your personal Diary
+
+    meta name="description" content="Write your personal stories. Keep your inner-most feelings private."
+
+    meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"
+
+
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+
+    link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+
+    = stylesheet_link_tag "application", media: "all"
+    = csrf_meta_tags
+
+  body class="hold-transition skin-green layout-top-nav"
+    div class="wrapper"
+      = render "navigation"
+
+      div class="content-wrapper container-fluid"
+        section class="content"
+          = yield
+
+    script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"
+    = javascript_include_tag "application"

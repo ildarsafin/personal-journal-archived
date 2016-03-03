@@ -11,22 +11,14 @@ gem "uglifier", ">= 1.3.0"
 gem "therubyracer", platforms: :ruby
 gem "jquery-rails"
 gem "react-rails"
-gem "turbolinks"
 gem "carrierwave"
 gem "cloudinary"
 gem "autoprefixer-rails"
 
 # all other gems
 gem "devise"
-gem "kaminari"
-gem "responders"
-gem "seedbank"
-gem "pundit"
 gem "slim"
 gem "thin"
-gem "acts_as_list"
-gem "resque"
-gem "kaminari"
 gem "simple_form"
 
 group :staging, :production do
@@ -43,9 +35,6 @@ group :test do
   gem "capybara"
   gem "capybara-webkit"
   gem "database_cleaner"
-  gem "email_spec"
-  gem "formulaic"
-  gem "launchy"
   gem "shoulda-matchers", require: false
   gem "timecop"
   gem "webmock", require: false
@@ -70,7 +59,6 @@ end
 
 group :development do
   gem "bullet"
-  gem "foreman"
   gem "letter_opener"
   gem "quiet_assets"
   gem "spring"

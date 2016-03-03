@@ -1,0 +1,8 @@
+.col-md-4.col-md-push-8
+
+  = react_component("GoalBox", {presenter: @goal_presenter.to_json}, {prerender: true})
+
+.col-md-8.col-md-pull-4
+  = react_component("DailyAchievementBox",
+    {presenter: @daily_achievement_presenter.to_json},
+    {prerender: true})
