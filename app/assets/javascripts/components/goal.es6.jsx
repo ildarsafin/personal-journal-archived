@@ -1,6 +1,6 @@
 class Goal extends React.Component {
   render () {
-    let milliseconds = Date.parse(this.props.endAt) - Date.parse(this.props.startAt)
+    let milliseconds = Date.parse(this.props.endAt) - new Date()
     let days = Math.floor(milliseconds / (1000*60*60*24));
 
     return (
