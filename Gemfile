@@ -22,6 +22,8 @@ gem "thin"
 gem "simple_form"
 gem "momentjs-rails"
 
+gem "intercom-rails"
+
 group :staging, :production do
   gem "rails_12factor"
 

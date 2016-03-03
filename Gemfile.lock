@@ -172,6 +172,8 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
+    intercom-rails (0.2.31)
+      activesupport (> 3.0)
     jasmine (2.4.0)
       jasmine-core (~> 2.4)
       phantomjs
@@ -423,6 +425,7 @@ DEPENDENCIES
   factory_girl_rails
   fuubar (~> 2.0.0)
   guard-rspec
+  intercom-rails
   jasmine (> 2.0)
   jasmine-jquery-rails
   jquery-rails
