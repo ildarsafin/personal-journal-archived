@@ -20,6 +20,7 @@ gem "devise"
 gem "slim"
 gem "thin"
 gem "simple_form"
+gem "momentjs-rails"
 
 group :staging, :production do
   gem "rails_12factor"
