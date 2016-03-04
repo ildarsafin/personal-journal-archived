@@ -1,4 +1,5 @@
-.login-box-msg Начните работу с системой
+.login-box-msg
+  = t("signup.title")
 
 div class="form-group loginform"
   = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post }) do |f|
@@ -15,6 +16,6 @@ div class="form-group loginform"
       = f.input :password_confirmation, label: false, placeholder: "Повторите ваш пароль", required: true, input_html: { class: "form-control" }
 
     .divider
-    = f.button :submit, "Поехали!", class: "btn btn-flat btn-block btn-danger"
+    = f.button :submit, t("signup.form.go"), class: "btn btn-flat btn-block btn-danger"
 
-= link_to "Войти", new_session_path(resource_name)
+= link_to t("signup.login"), new_session_path(resource_name)

@@ -14,6 +14,14 @@ module Users
       end
     end
 
+    def set_user_locale
+      locale = params[:locale]
+
+      current_user.locale = locale
+      current_user.save
+      redirect_to :back
+    end
+
     private
 
     def user_params

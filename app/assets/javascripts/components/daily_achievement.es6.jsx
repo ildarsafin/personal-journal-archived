@@ -1,6 +1,7 @@
 class DailyAchievement extends React.Component {
   render () {
     let was = moment(this.props.createdAt, "YYYYMMDDHHmm").fromNow();
+
     return (
       <li>
         <ul className="timeline">

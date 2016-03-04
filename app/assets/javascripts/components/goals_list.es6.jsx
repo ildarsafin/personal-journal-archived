@@ -48,7 +48,7 @@ class GoalsList extends React.Component {
     return (
       <div className="box box-primary">
         <div className="box-header with-border">
-          <h3 className="box-title">В 2016 я хочу</h3>
+          <h3 className="box-title">{this.props.goal_title}</h3>
           <div className="box-tools pull-right">
             <button className="btn btn-box-tool" data-widget="collapse"><i className="fa fa-minus"></i></button>
           </div>

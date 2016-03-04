@@ -33,9 +33,9 @@ class GoalBox extends React.Component {
   render () {
     return (
       <div>
-        <GoalsList goals={ this.state.goals } removeGoal={ this.removeGoal.bind(this) } />
+        <GoalsList goals={ this.state.goals } removeGoal={ this.removeGoal.bind(this) } goal_title={this.props.goal_title} />
 
-        <GoalForm form={ this.state.form } onGoalSubmit={ this.handleGoalSubmit.bind(this) } />
+        <GoalForm form={ this.state.form } onGoalSubmit={ this.handleGoalSubmit.bind(this) } goal_form={this.props.goal_form} />
       </div>
     );
   }
