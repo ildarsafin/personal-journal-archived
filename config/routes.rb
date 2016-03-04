@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :daily_achievements, only: [:create, :index]
 
   scope module: :users do
-    resources :profiles, only: [:edit, :update]
+    resources :profiles, only: [:edit, :update] do
+      post :set_locale, action: :set_user_locale
+    end
   end
 
   devise_for :users, controllers: {

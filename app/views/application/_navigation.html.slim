@@ -15,4 +15,8 @@ header class="main-header"
               span
                 = current_user.name_or_email
           li
-            = link_to "Выйти", destroy_user_session_url, method: :delete
+            = link_to "English", profile_set_locale_url(current_user, locale: "en"), method: :post
+          li
+            = link_to "Русский", profile_set_locale_url(current_user, locale: "ru"), method: :post
+          li
+            = link_to t("logout"), destroy_user_session_url, method: :delete

@@ -1,23 +1,57 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  profile:
+    edit:
+      title: "Profile Settings"
+      logout: "Logout"
+      avatar: "Avatar"
+
+      labels:
+        email: "Email"
+        full_name: "Your Name"
+
+      update: "Update"
+
+      errors:
+        image_size_240_240: "Photo size must be no higher than 240x240"
+
+  goal:
+    title: "In 2016 I want"
+
+    form:
+      title: "Add Goals for a year"
+      labels:
+        goal: "Goal"
+        time_range: "In the range of"
+        achievement_date: "Achievement Date"
+
+      add: "Add Goal"
+
+      placeholders:
+        goal: "Write your inner-most goal or wishes for a year"
+
+  daily_achievement:
+    title: "Daily Achievements"
+    description: "Write everything you've done today."
+
+    form:
+      add: "Add Achievement"
+
+      placeholders:
+        text: "Describe your day. How was it? What you've achieved today? What you've failed? Share your thoughts with yourselves."
+
+  login:
+    title: "Login to start"
+
+    form:
+      login: "Login"
+
+    register: "Sign Up"
+    forgot_password: "Forgot Password?"
+
+  signup:
+    title: "Register to start"
+
+    form:
+      go: "Go!"
+
+    login: "Login"

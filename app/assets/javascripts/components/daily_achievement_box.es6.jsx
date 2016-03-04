@@ -25,7 +25,7 @@ class DailyAchievementBox extends React.Component {
   render () {
     return (
       <div>
-        <DailyAchievementForm form={ this.state.form } onAchievementSubmit={ this.handleDailyAchievementSubmit.bind(this) } />
+        <DailyAchievementForm form={ this.state.form } onAchievementSubmit={ this.handleDailyAchievementSubmit.bind(this) } daily_achievement_locale={this.props.daily_achievement_locale} />
         <DailyAchievementsList dailyAchievements={ this.state.dailyAchievements } />
       </div>
     )

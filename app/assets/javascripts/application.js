@@ -32,8 +32,8 @@ $(function () {
     zIndex: 999999
   });
 
-  $("#start_at").val(moment().format("MMMM D, YYYY"))
-  $("#end_at").val(moment().endOf('year').format("MMMM D, YYYY"))
+  $("#start_at").val(moment())
+  $("#end_at").val(moment().endOf('year'))
 
   //Date range as a button
   $('#daterange-btn').daterangepicker({
@@ -46,7 +46,7 @@ $(function () {
     startDate: moment().subtract(29, 'days'),
     endDate: moment()
   }, function (start, end) {
-      $('#start_at').val(start.format('MMMM D, YYYY'))
-      $('#end_at').val(end.format('MMMM D, YYYY'))
+      $('#start_at').val(start)
+      $('#end_at').val(end)
   });
 });

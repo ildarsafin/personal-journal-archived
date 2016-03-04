@@ -1,22 +1,24 @@
 section class="content"
   div class="box box-primary"
     .box-header
-      h3 class="box-title" Настройки Профиля
+      h3 class="box-title"
+        = t "profile.edit.title"
 
     .box-body
       = simple_form_for(@user, url: profile_path(@user), html: { method: :put, class: "form-horizontal" }) do |f|
 
         .col-md-4
-          label Аватар
+          label = t("profile.edit.avatar")
           .col-md-12
             = image_tag(@user.avatar_url, width: 200, height: 200, class: "upload-preview")
             = f.file_field :avatar, class: "image_to_upload"
-            | Размер фото должно быть не меньше 240x240
+            = t("profile.edit.errors.image_size_240_240")
 
         .col-md-8
           .form-group
             .col-md-4
-              label Электронная почта
+              label
+                = t("profile.edit.labels.email")
             .col-md-8
               .input-group
                 span class="input-group-addon"
@@ -25,9 +27,10 @@ section class="content"
 
           .form-group
             .col-md-4
-              label Имя
+              label
+                = t("profile.edit.labels.full_name")
 
             .col-md-8
               = f.input :full_name, label: false, input_html: { class: "form-control" }
 
-          = f.submit t(".update", default: "Сохранить"), class: "btn btn-info btn-flat"
+          = f.submit t("profile.edit.update"), class: "btn btn-info btn-flat"
