@@ -22,11 +22,28 @@ module Users
       redirect_to :back
     end
 
+    def set_background
+      background = current_user.backgrounds.create(background_params)
+
+      current_user.backgrounds.active.each do |active_background|
+        active_background.update_attributes(active: false) unless active_background == background
+      end
+
+      redirect_to edit_profile_url(current_user)
+    end
+
+
     private
 
     def user_params
       params.require(:user).permit(
         :full_name, :email, :avatar
+      )
+    end
+
+    def background_params
+      params.require(:background).permit(
+        :background
       )
     end
   end

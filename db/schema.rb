@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160304201000) do
+ActiveRecord::Schema.define(version: 20160305204224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "backgrounds", force: :cascade do |t|
+    t.string  "background",                null: false
+    t.boolean "active",     default: true
+    t.integer "user_id",                   null: false
+  end
+
+  add_index "backgrounds", ["user_id"], name: "index_backgrounds_on_user_id", using: :btree
 
   create_table "daily_achievements", force: :cascade do |t|
     t.text     "text",       null: false

@@ -19,7 +19,8 @@ html
     div class="wrapper"
       = render "navigation"
 
-      div class="content-wrapper container-fluid"
+      div class="content-wrapper container-fluid" style="background-image: url(#{current_user.active_background_url}); background-size:100%;
+    background-attachment: fixed;"
         section class="content"
           = yield
 

@@ -29,6 +29,10 @@ en:
       placeholders:
         goal: "Write your inner-most goal or wishes for a year"
 
+  done_goal:
+    title: "You've achieved"
+
+
   daily_achievement:
     title: "Daily Achievements"
     description: "Write everything you've done today."

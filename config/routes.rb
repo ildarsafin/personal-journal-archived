@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   scope module: :users do
     resources :profiles, only: [:edit, :update] do
       post :set_locale, action: :set_user_locale
+      post :set_background, action: :set_background
     end
   end
 

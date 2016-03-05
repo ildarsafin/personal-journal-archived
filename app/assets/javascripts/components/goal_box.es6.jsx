@@ -53,7 +53,7 @@ class GoalBox extends React.Component {
         <GoalsList goals={ this.state.goals } removeGoal={ this.removeGoal.bind(this) } doneGoal={ this.doneGoal.bind(this) } goal_title={this.props.goal_title} />
 
         <GoalForm form={ this.state.form } onGoalSubmit={ this.handleGoalSubmit.bind(this) } goal_form={this.props.goal_form} />
-        <DoneGoalsList goals={ this.state.doneGoals } removeGoal={ this.removeGoal.bind(this) } />
+        <DoneGoalsList goals={ this.state.doneGoals } removeGoal={ this.removeGoal.bind(this) } done_goal_title={this.props.done_goal_title} />
       </div>
     );
   }

@@ -45,7 +45,7 @@ class DoneGoalsList extends React.Component {
     return (
       <div className="box">
         <div className="box-header with-border">
-          <h3 className="box-title">Вы выполнили или осуществили</h3>
+          <h3 className="box-title">{this.props.done_goal_title}</h3>
           <div className="box-tools pull-right">
             <button className="btn btn-box-tool" data-widget="collapse"><i className="fa fa-minus"></i></button>
           </div>

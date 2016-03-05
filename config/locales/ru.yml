@@ -28,6 +28,8 @@ ru:
       placeholders:
         goal: "Введите свои самые заветные цели и желания на год"
 
+  done_goal:
+    title: "Вы выполнили или осуществили"
 
   daily_achievement:
     title: "Достижения дня"

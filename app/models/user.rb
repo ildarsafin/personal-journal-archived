@@ -10,6 +10,13 @@ class User < ActiveRecord::Base
 
   has_many :daily_achievements
 
+  has_many :backgrounds
+
+  def active_background_url
+    background = backgrounds.active.first
+    background.background_url if background
+  end
+
   def name_or_email
     return full_name if full_name.present?
 
