@@ -4,4 +4,5 @@ class Goal < ActiveRecord::Base
   validates :description, presence: true
 
   scope :undone, -> { where(done: false) }
+  scope :done, -> { where(done: true) }
 end

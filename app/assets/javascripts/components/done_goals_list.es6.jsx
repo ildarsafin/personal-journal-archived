@@ -1,4 +1,4 @@
-class GoalsList extends React.Component {
+class DoneGoalsList extends React.Component {
   constructor (props, context) {
     super(props, context);
   }
@@ -11,7 +11,7 @@ class GoalsList extends React.Component {
       type: "POST",
       dataType: "json",
       success: function () {
-        this.props.doneGoal(goal)
+        this.props.removeGoal(goal)
       }.bind(this)
     });
   }
@@ -34,21 +34,18 @@ class GoalsList extends React.Component {
     let sortedGoals = this.props.goals.sort(function(a, b) { return b.id - a.id });
     let self = this;
     let goals = sortedGoals.map(function ( goal ) {
-      return <Goal
+      return <DoneGoal
         description={ goal.description }
-        startAt={ goal.start_at }
-        endAt={ goal.end_at }
         key={ goal.id }
         id={goal.id}
         handleGoalDestroy={self.handleGoalDestroy.bind(self, goal)}
-        handleGoalCheck={self.handleGoalCheck.bind(self, goal)}
       />
     });
 
     return (
-      <div className="box box-primary">
+      <div className="box">
         <div className="box-header with-border">
-          <h3 className="box-title">{this.props.goal_title}</h3>
+          <h3 className="box-title">Вы выполнили или осуществили</h3>
           <div className="box-tools pull-right">
             <button className="btn btn-box-tool" data-widget="collapse"><i className="fa fa-minus"></i></button>
           </div>

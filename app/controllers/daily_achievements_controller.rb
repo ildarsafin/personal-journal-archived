@@ -10,7 +10,8 @@ class DailyAchievementsController < ApplicationController
     }
 
     @goal_presenter = {
-      goals: current_user.goals.undone,
+      undone_goals: current_user.goals.undone,
+      done_goals: current_user.goals.done,
       form: {
         action: goals_url,
         csrf_param: request_forgery_protection_token,
