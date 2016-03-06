@@ -2,7 +2,7 @@ class DailyAchievementForm extends React.Component {
   handleSubmit (event) {
     event.preventDefault();
 
-    var text = this.refs.text.value.trim();
+    var text = this.refs.achievement_text.value;
 
     // validate
     if (!text)
@@ -14,7 +14,7 @@ class DailyAchievementForm extends React.Component {
     this.props.onAchievementSubmit( formData, this.props.form.action );
 
     // reset form
-    this.refs.text.value = "";
+    $(".achievement-textarea").data("wysihtml5").editor.setValue("");
   }
 
   render () {
@@ -29,7 +29,7 @@ class DailyAchievementForm extends React.Component {
         <div className="box-body pad">
           <form ref="form" className="daily-achievement-form" action={ this.props.form.action } acceptCharset="UTF-8" method="post" onSubmit={ this.handleSubmit.bind(this) }>
             <input type="hidden" name={ this.props.form.csrf_param } value={ this.props.form.csrf_token } />
-            <textarea ref="text" className="textarea achievement-textarea" name="daily_achievement[text]" placeholder={this.props.daily_achievement_locale.form.placeholders.text}></textarea>
+            <textarea ref="achievement_text" className="textarea achievement-textarea" name="daily_achievement[text]" placeholder={this.props.daily_achievement_locale.form.placeholders.text}></textarea>
             <button type="submit" className="btn btn-block btn-default btn-flat">{this.props.daily_achievement_locale.form.add}</button>
           </form>
         </div>

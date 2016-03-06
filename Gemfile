@@ -14,6 +14,7 @@ gem "react-rails"
 gem "carrierwave"
 gem "mini_magick"
 gem "autoprefixer-rails"
+gem "bootstrap-wysihtml5-rails"
 
 # all other gems
 gem "devise"

@@ -15,14 +15,16 @@
 //= require bootstrap-sprockets
 //= require react
 //= require react_ujs
+//= require bootstrap-wysihtml5
 //= require components
 //= require_tree ./dashboard_plugins
+
 //= require_tree .
 
 $(function () {
-  $(".textarea").wysihtml5();
-
   $.widget.bridge('uibutton', $.ui.button);
+
+  $(".textarea").wysihtml5();
 
     //jQuery UI sortable for the todo list
   $(".todo-list").sortable({
@@ -50,3 +52,4 @@ $(function () {
       $('#end_at').val(end)
   });
 });
+

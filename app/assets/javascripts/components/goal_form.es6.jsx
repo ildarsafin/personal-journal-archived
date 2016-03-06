@@ -20,7 +20,6 @@ class GoalForm extends React.Component {
   }
 
   render () {
-    console.log(this.props.goal_form)
     return (
       <div className="box box-success">
         <div className="box-header">
