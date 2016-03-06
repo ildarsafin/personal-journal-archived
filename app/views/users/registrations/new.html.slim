@@ -5,15 +5,15 @@ div class="form-group loginform"
   = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post }) do |f|
 
     div class="form-group has-feedback"
-      = f.input :email, label: false, input_html: {class: "form-control" }
+      = f.input :email, label: false, input_html: {class: "form-control", placeholder: "Your email" }
       span class="glyphicon glyphicon-envelope form-control-feedback"
 
     div class="form-group has-feedback"
-      = f.input :password, label: false, input_html: { class: "form-control" }
+      = f.input :password, label: false, input_html: { class: "form-control", placeholder: "Your password" }
       span class="glyphicon glyphicon-lock form-control-feedback"
 
     div class="form-group has-feedback"
-      = f.input :password_confirmation, label: false, required: true, input_html: { class: "form-control" }
+      = f.input :password_confirmation, label: false, required: true, input_html: { class: "form-control", placeholder: "Confirm your password" }
 
     .divider
     = f.button :submit, t("signup.form.go"), class: "btn btn-flat btn-block btn-danger"
