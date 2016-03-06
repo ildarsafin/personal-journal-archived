@@ -30,7 +30,7 @@ en:
         goal: "Write your inner-most goal or wishes for a year"
 
   done_goal:
-    title: "You've achieved"
+    title: "Your last 5 achieved goals"
 
 
   daily_achievement:
