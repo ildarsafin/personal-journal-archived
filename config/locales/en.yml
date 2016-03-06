@@ -1,4 +1,5 @@
 en:
+  logout: "Logout"
   profile:
     edit:
       title: "Profile Settings"

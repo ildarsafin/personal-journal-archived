@@ -40,10 +40,10 @@ $(function () {
   //Date range as a button
   $('#daterange-btn').daterangepicker({
     ranges: {
-      'В этом году': [moment(), moment().endOf('year')],
-      'За сегодня': [moment(), moment()],
-      'За 7 дней': [moment(), moment().add(6, 'days')],
-      'За этот месяц': [moment().endOf('month'), moment().startOf('month')]
+      'This year': [moment(), moment().endOf('year')],
+      'This month': [moment().endOf('month'), moment().startOf('month')],
+      'For a week': [moment(), moment().add(6, 'days')],
+      'Today': [moment(), moment()]
     },
     startDate: moment().subtract(29, 'days'),
     endDate: moment()

@@ -1,4 +1,5 @@
 ru:
+  logout: "Выйти"
   profile:
     edit:
       title: "Настройки Профиля"
@@ -58,4 +59,4 @@ ru:
     form:
       go: "Поехали!"
 
-    login: "Воити"
+    login: "Войти"
