@@ -53,7 +53,7 @@ en:
     forgot_password: "Forgot Password?"
 
   signup:
-    title: "Register to start"
+    title: "Sign up to start"
 
     form:
       go: "Go!"
