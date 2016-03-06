@@ -9,10 +9,11 @@ ru:
         email: "Электронная почта"
         full_name: "Имя"
 
-      update: "Обновить"
+      update_profile: "Обновить Профиль"
 
-      errors:
-        image_size_240_240: "Размер фото должно быть не меньше 240x240"
+  background_image:
+    background_image: "Обои"
+    set_image: "Установить обои"
 
   goal:
     title: "В 2016 я хочу"

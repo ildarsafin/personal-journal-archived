@@ -9,10 +9,11 @@ en:
         email: "Email"
         full_name: "Your Name"
 
-      update: "Update"
+      update_profile: "Update Profile"
 
-      errors:
-        image_size_240_240: "Photo size must be no higher than 240x240"
+  background_image:
+    background_image: "Background Image"
+    set_image: "Set background image"
 
   goal:
     title: "In 2016 I want"

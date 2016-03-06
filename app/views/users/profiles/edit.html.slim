@@ -5,16 +5,25 @@ section class="content"
         = t "profile.edit.title"
 
     .box-body
+      .col-md-4
+        = simple_form_for(Background.new, url: profile_set_background_url(current_user), html: { method: :post, class: "form-horizontal" }) do |f|
+          label
+            = t("background_image.background_image")
+          .col-md-12
+            = image_tag(current_user.active_background_url, width: 200, height: 200, class: "upload-preview2")
+            = f.file_field :background, class: "image_to_upload2"
+
+            = f.submit t("background_image.set_image"), class: "btn btn-info btn-flat"
+
       = simple_form_for(@user, url: profile_path(@user), html: { method: :put, class: "form-horizontal" }) do |f|
 
-        .col-md-4
+        .col-md-3.col-md-span-1
           label = t("profile.edit.avatar")
           .col-md-12
             = image_tag(@user.avatar_url, width: 200, height: 200, class: "upload-preview")
             = f.file_field :avatar, class: "image_to_upload"
-            = t("profile.edit.errors.image_size_240_240")
 
-        .col-md-8
+        .col-md-4
           .form-group
             .col-md-4
               label
@@ -33,15 +42,4 @@ section class="content"
             .col-md-8
               = f.input :full_name, label: false, input_html: { class: "form-control" }
 
-          = f.submit t("profile.edit.update"), class: "btn btn-info btn-flat"
-
-
-      = simple_form_for(Background.new, url: profile_set_background_url(current_user), html: { method: :post, class: "form-horizontal" }) do |f|
-
-        .col-md-12
-          label Background Image
-          = image_tag(current_user.active_background_url, width: 200, height: 200, class: "upload-preview2")
-          = f.file_field :background, class: "image_to_upload2"
-          = t("profile.edit.errors.image_size_240_240")
-
-          = f.submit "Set Image", class: "btn btn-info btn-flat"
+          = f.submit t("profile.edit.update_profile"), class: "btn btn-info btn-flat"
