@@ -1,5 +1,4 @@
-.login-box-msg
-  = t("signup.title")
+.login-box-msg Sign up to start
 
 div class="form-group loginform"
   = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post }) do |f|
@@ -16,6 +15,6 @@ div class="form-group loginform"
       = f.input :password_confirmation, label: false, required: true, input_html: { class: "form-control", placeholder: "Confirm your password" }
 
     .divider
-    = f.button :submit, t("signup.form.go"), class: "btn btn-flat btn-block btn-danger"
+    = f.button :submit,"Go!", class: "btn btn-flat btn-block btn-danger"
 
-= link_to t("signup.login"), new_session_path(resource_name)
+= link_to "Login", new_session_path(resource_name)

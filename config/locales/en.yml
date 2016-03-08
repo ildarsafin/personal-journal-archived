@@ -44,20 +44,3 @@ en:
 
       placeholders:
         text: "Describe your day. How was it? What you've achieved today? What you've failed? Share your thoughts with yourselves."
-
-  login:
-    title: "Login to start"
-
-    form:
-      login: "Login"
-
-    register: "Sign Up"
-    forgot_password: "Forgot Password?"
-
-  signup:
-    title: "Sign up to start"
-
-    form:
-      go: "Go!"
-
-    login: "Login"
