@@ -4,8 +4,9 @@ header class="main-header"
     .container
       .navbar-header.col-xs-4
         = link_to root_url, class: "navbar-brand" do
-          b My
-          | Diary
+          b
+            = t("my")
+          = t("diary")
 
       .navbar-custom-menu
         ul class="nav navbar-nav"

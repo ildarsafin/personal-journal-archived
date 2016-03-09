@@ -1,4 +1,6 @@
 ru:
+  my: "Мой"
+  diary: "Дневник"
   logout: "Выйти"
   profile:
     edit:
