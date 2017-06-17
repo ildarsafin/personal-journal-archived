@@ -3,7 +3,6 @@
 /log/*
 !/log/.keep
 /tmp
-/config/database.yml
 *.DS_Store
 *.byebug_history
 /.env
