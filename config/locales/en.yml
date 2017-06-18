@@ -1,6 +1,6 @@
 en:
-  my: "My"
-  diary: "Diary"
+  personal: "Personal"
+  journal: "Journal"
   logout: "Logout"
   profile:
     edit:
