@@ -33,4 +33,4 @@ Guidelines
 
 License
 -------
-Timetracker is distributed under the MIT license.
+PersonalJournal is distributed under the MIT license.
