@@ -1,9 +1,19 @@
-# PersonalJournal
+# PersonalJournal (ex MyDiary)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/ildarsafin/personal_journal)
 
-Timetracker is a dead simple tracking application that I use for internal time-tracking. It allows me to register how many hours I've worked on a task.
-User Rails 4 and Ruby 2.3.0
+PersonalJournal is simple webapp which allows you to set goals and write daily reports in one page.
+
+Features:
+---------
+- You can set your custom background images
+- Set goals and write reports in one screen
+- Set goals with achievement date.
+
+Roadmap:
+---------
+- Add endless scrolling (pagination) for reports
+- Add specs
 
 System Dependencies
 -------------------
